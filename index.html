@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Foody App</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/pumpkin.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <a href="index.html"><h3>Foody | App</h3></a>
+            </div>
+            <div class="nav-links" id="nav-links">
+               <i class="fa fa-close" onClick="closeMenu()"></i>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">recipe</a></li>
+                </ul>
+            </div>
+            <div class="signup">
+                <button type="button" class="button nav-links-button">SIGN UP</button>
+            </div>
+            <i class="fa fa-bars" onClick="showMenu()"></i>
+        </nav>
+        
+        <div class="banner-title">
+            <h1>“Tis an ill cook that cannot lick his own fingers.” <cite>― William Shakespeare</cite></h1>
+            <button type="button" class="button banner-button">SEE MENU</button>
+        </div>
+        <div class="vertical-bar">
+            <div class="search-icon">
+                <i class="fa fa-th-list"></i>
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="social-icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-pinterest"></i>
+            </div>
+        </div>
+        <div class="notifications">
+            <div class="contents">
+                <small>Subscribe to our monthly magazine - Limited Edition.</small>
+                <p><a href="#">Prev</a> <a href="#">Next</a></p>
+            </div>
+            <div class="notifications-img">
+                <img src="images/coffee-cup.jpg" alt="Colazione">
+            </div>
+        </div>
+    </header>
+    
+    <script src="https://kit.fontawesome.com/9bd4802e0d.js" crossorigin="anonymous"></script>
+    <script>
+        var show = document.getElementById('nav-links');
+        function showMenu() {
+            show.style.right = "0";
+        }
+        function closeMenu() {
+            show.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

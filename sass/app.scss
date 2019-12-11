@@ -1,0 +1,230 @@
+$sunglow: #FFCE34;
+$orange: #FA6219;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    fonts-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.button {
+    padding: 10px 20px;
+    border: 0;
+    background-color: $sunglow;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $sunglow;
+        color: aliceblue;
+    }
+}
+
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('../images/vegetable-sandwich-on-plate.jpg');
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 40px 120px;
+    
+    .nav-logo a {
+        text-decoration: none;
+        color: white;
+    }
+    .nav-links {
+        
+        ul {
+            margin-left: 50px;
+            display: flex;
+        }
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            padding: 8px 25px;
+            
+            &:hover::after {
+                width: 100%;
+            }
+            
+            &::after {
+                content: "";
+                width: 0;
+                height: 2px;
+                background-color: $sunglow;
+                display: block;
+                margin: auto;
+                transition: 0.5s;
+            }
+            
+            a {
+                color: aliceblue;
+                text-decoration: none;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.banner-title {
+    margin: 80px auto;
+    top: 35%;
+    right: 45%;
+    transform: translate(10%, 45%);
+    width: 50%;
+    color: aliceblue;
+    
+    h1 {
+        font-size: 3em;
+        margin-bottom: 30px;
+        
+        cite {
+            font-size: 13px;
+            color: $sunglow;
+        }
+    }
+}
+
+.vertical-bar {
+    height: 100%;
+    background-color: #000000;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.search-icon {
+    height: 60%;
+    width: 80px;
+    
+    .fa {
+        color: aliceblue;
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+        margin: 45px 25px;
+    }
+}
+.social-icons {
+    height: 35%;
+    width: 80px;
+    background-color: $sunglow;
+    text-align: center;
+    padding-top: 30%;
+    bottom: 0;
+    position: absolute;
+    
+    .fa {
+        color: #000000;
+        cursor: pointer;
+        display: block;
+        margin: 15px 25px;
+        padding: 6px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+}
+
+.notifications {
+    display: flex;
+    align-content: center;
+    align-self: center;
+    width: 400px;
+    right: 0;
+    bottom: 0;
+    background-color: $sunglow;
+    position: absolute;
+    align-items: center;
+    
+    .contents {
+        flex-basis: 50%;
+        padding: 10px;
+        
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 13px;
+            margin: 0 10px;
+        }
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+    .notifications-img {
+        flex-basis: 50%;
+        background: url(/images/coffee-cup.jpg) no-repeat center / cover;
+        
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.navbar .fa {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .vertical-bar {
+        display: none;
+    }
+    .banner-title {
+        margin: 80px 40px;
+        top: 0;
+        transform: translate(10%, 30%);
+    }
+    .banner-title h1 {
+        font-size: 30px;
+    }
+    .notifications {
+        width: 100%;
+    }
+    .navbar {
+        padding: 10px 30px;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .navbar .fa {
+        display: block;
+        color: aliceblue;
+        margin: 10px 25px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .fa-bars {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+        height: 100vh;
+        width: 200px;
+        background-color: black;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        margin: 0 auto;
+        position: absolute;
+        z-index: 2;
+        overflow: auto;
+        transition: 0.5s cubic-bezier(0.5, 0.7, 1.0, 0.5);
+    }
+    .navbar .nav-links ul {
+        flex-direction: column;
+    }
+    .navbar .button {
+        display: none;
+    }
+}
